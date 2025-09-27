@@ -1,0 +1,28 @@
+name: mcp-python-server
+image: mcp/mcp-python-server
+type: server
+meta:
+    category: communication
+    tags:
+        - communication
+about:
+    title: Mcp python server for testing automation
+    description: This MCP server provides a foundation for AI-powered automation workflows. It enables integration with productivity tools such as Gmail, Google Drive, and spreadsheets, while supporting custom logic and intelligent agents. Designed for experimenting with task automation, data processing, and smart assistants using n8n and modern AI tools.
+    icon: https://avatars.githubusercontent.com/u/46705041?v=4
+source:
+    project: https://github.com/Qassem97/mcp-python-server
+config:
+    description: Configure the connection to Mcp python server for testing automation
+    secrets:
+        - name: mcp-python-server.OPENAI_API_KEY
+          env: OPENAI_API_KEY
+          example: <OPENAI_API_KEY>
+    env:
+        - name: port
+          example: "8080"
+          value: hstg
+    parameters:
+        type: object
+        properties:
+            port:
+                type: string
